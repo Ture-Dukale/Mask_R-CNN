@@ -36,7 +36,7 @@ from keras.backend import set_session
 import tensorflow as tf
 config = tf.compat.v1.ConfigProto()
 config.gpu_options.allow_growth = True  # dynamically grow the memory used on the GPU
-sess = tf.Session(config=config)
+sess = tf.compat.v1.Session(config=config)
 set_session(sess)  # set this TensorFlow session as the default session for Keras
 
 ############################################################
