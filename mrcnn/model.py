@@ -34,6 +34,7 @@ assert LooseVersion(keras.__version__) >= LooseVersion('2.0.8')
 
 from keras.backend import set_session
 import tensorflow as tf
+tf.compat.v1.disable_eager_execution()
 config = tf.compat.v1.ConfigProto()
 config.gpu_options.allow_growth = True  # dynamically grow the memory used on the GPU
 sess = tf.compat.v1.Session(config=config)
